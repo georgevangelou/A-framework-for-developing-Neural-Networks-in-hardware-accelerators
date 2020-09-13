@@ -1,0 +1,43 @@
+#ifndef ALL_DEFINED
+
+//***********************weight dimensions***************************
+
+//conv1 2D
+#define CONV1_KERNEL_DIM 3
+#define CONV1_FM_INPUTS 1
+#define CONV1_NEURONS 6
+//#define CONV1_WEIGHTS_PER_NEURON (CONV1_KERNEL_DIM*CONV1_FILTER_SIZE*CONV1_FM_INPUTS)
+
+//conv2 2D
+#define CONV2_KERNEL_DIM 3
+#define CONV2_FM_INPUTS 6
+#define CONV2_NEURONS 16
+//#define CONV2_WEIGHTS_PER_NEURON (CONV2_KERNEL_DIM*CONV2_FILTER_SIZE*CONV2_FM_INPUTS)
+
+//dense1
+#define DENSE1_NEURONS 120
+#define DENSE1_WEIGHTS_PER_NEURON 576
+
+//dense2
+#define DENSE2_NEURONS 84
+#define DENSE2_WEIGHTS_PER_NEURON 120
+
+//dense3
+#define DENSE3_NEURONS 10
+#define DENSE3_WEIGHTS_PER_NEURON 84
+
+
+//***********************in/out dimensions***************************
+#define STRIDE 2
+#define INPUT_DIMENSION 32
+#define OUTPUT1_DIM (INPUT_DIMENSION-2) //30
+#define OUTPUT2_DIM (OUTPUT1_DIM/STRIDE) //15
+#define OUTPUT3_DIM (OUTPUT2_DIM-2) //13
+#define OUTPUT4_DIM (OUTPUT3_DIM/STRIDE) //6
+#define OUTPUT5_LENGTH DENSE1_WEIGHTS_PER_NEURON
+#define OUTPUT6_LENGTH DENSE1_NEURONS
+#define OUTPUT7_LENGTH DENSE2_NEURONS
+#define OUTPUT8_LENGTH DENSE3_NEURONS
+
+#define ALL_DEFINED 
+#endif

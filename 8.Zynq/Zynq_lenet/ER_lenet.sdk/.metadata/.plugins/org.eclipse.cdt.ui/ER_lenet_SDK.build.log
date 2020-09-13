@@ -1,0 +1,23 @@
+23:38:15 **** Auto Build of configuration Debug for project ER_lenet_SDK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ER_lenet_SDK_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ER_lenet_SDK.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ER_lenet_SDK_bsp/ps7_cortexa9_0/lib -o "ER_lenet_SDK.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ER_lenet_SDK.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ER_lenet_SDK.elf  |tee "ER_lenet_SDK.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64696	   5688	  34672	 105056	  19a60	ER_lenet_SDK.elf
+'Finished building: ER_lenet_SDK.elf.size'
+' '
+
+23:38:19 Build Finished (took 3s.744ms)
+

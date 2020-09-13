@@ -1,0 +1,10 @@
+file		100	1000	10000
+fixed-8		73	74.8
+fixed-16,8	99	99.6
+fixed-32,16	100	100
+float-32	100	100	99.81
+float-16	100	100
+fixed_ristretto	100	99.3
+judd_uniform	98	97.6	97.7
+judd_perlayer	-	-	-
+judd_mixed	59	60.6
