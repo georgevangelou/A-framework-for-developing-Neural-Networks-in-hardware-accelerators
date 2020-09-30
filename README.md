@@ -18,7 +18,7 @@ Most code is commented or self-descriptive.
 In order to replicate our workflow, start developing in the order of the folders' indices.
 
 Frameworks used:
-- Caffe
+- Caffe / Ristretto
 - Python 3.8
 - Keras
 - C/C++
