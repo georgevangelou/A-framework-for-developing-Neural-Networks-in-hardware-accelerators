@@ -6,10 +6,10 @@ The **main goal** of this thesis was to create a LeNet-5 implementation in an FP
 
 The **authors** of this thesis were (in alphabetical order):
 - George Evangelou (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: george_evangelou@windowslive.com
+  - Email: george_evangelou [at] windowslive.com
   - [LinkedIn profile](https://www.linkedin.com/in/georgios-evangelou-2a389b167/)
 - Nick Roussos (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: up1046939@upnet.gr
+  - Email: nroussos97 [at] gmail.com
 
 **Duration** of the thesis: May 2019 - July 2020
 ## Instructions
