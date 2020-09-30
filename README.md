@@ -34,6 +34,7 @@ The folders contained within this repository are the following:
   - An excel document that assisted in developments and debugging.
   - Two excel documents containing the accumulative evaluation results of our C/C++ implementation.
 - **6.Testbench**: A script that generates files to be utilized by the Vivado HLS testbench we have created (_see 3.LeNet_in_C_).
+- **7.LeNet_in_Ristretto**: The LeNet-5 model in Ristretto with the corresponding quantization.
 - **8.Zynq**: 
   - The IP produced using Vivado and Vivado HLS.
   - The SDK project produced.
