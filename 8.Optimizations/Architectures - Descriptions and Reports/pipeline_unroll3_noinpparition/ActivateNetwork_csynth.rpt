@@ -1,0 +1,348 @@
+
+
+================================================================
+== Vivado HLS Report for 'ActivateNetwork'
+================================================================
+* Date:           Sun Apr  5 20:49:51 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ER_lenet
+* Solution:       Pipeline_Unroll3_NoInpPartition
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.737|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  90686|  90686|  90686|  90686|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+--------------------+-------+-------+-------+-------+---------+
+        |                               |                    |    Latency    |    Interval   | Pipeline|
+        |            Instance           |       Module       |  min  |  max  |  min  |  max  |   Type  |
+        +-------------------------------+--------------------+-------+-------+-------+-------+---------+
+        |grp_conv_layer2_fu_212         |conv_layer2         |   8065|   8065|   8065|   8065|   none  |
+        |grp_dense_layer1_fu_264        |dense_layer1        |  38761|  38761|  38761|  38761|   none  |
+        |grp_conv_layer1_fu_274         |conv_layer1         |  29749|  29749|  29749|  29749|   none  |
+        |grp_dense_layer3_fu_302        |dense_layer3        |   1082|   1082|   1082|   1082|   none  |
+        |grp_avg_pooling_layer2_fu_311  |avg_pooling_layer2  |    580|    580|    580|    580|   none  |
+        |grp_avg_pooling_layer1_fu_328  |avg_pooling_layer1  |   1354|   1354|   1354|   1354|   none  |
+        |grp_dense_layer2_fu_348        |dense_layer2        |  10501|  10501|  10501|  10501|   none  |
+        |grp_flattening_layer_fu_358    |flattening_layer    |    579|    579|    579|    579|   none  |
+        +-------------------------------+--------------------+-------+-------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |       37|      0|    5912|   45839|
+|Memory           |       19|      -|     298|     219|
+|Multiplexer      |        -|      -|       -|    1984|
+|Register         |        -|      -|      24|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       56|      0|    6234|   48042|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        8|      0|       3|      47|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+--------------------+---------+-------+------+-------+
+    |            Instance           |       Module       | BRAM_18K| DSP48E|  FF  |  LUT  |
+    +-------------------------------+--------------------+---------+-------+------+-------+
+    |grp_avg_pooling_layer1_fu_328  |avg_pooling_layer1  |        0|      0|   335|    713|
+    |grp_avg_pooling_layer2_fu_311  |avg_pooling_layer2  |        0|      0|   369|    928|
+    |grp_conv_layer1_fu_274         |conv_layer1         |        0|      0|   454|   2289|
+    |grp_conv_layer2_fu_212         |conv_layer2         |        0|      0|  3871|  32978|
+    |grp_dense_layer1_fu_264        |dense_layer1        |       32|      0|   409|   7176|
+    |grp_dense_layer2_fu_348        |dense_layer2        |        4|      0|    71|    368|
+    |grp_dense_layer3_fu_302        |dense_layer3        |        1|      0|   333|    978|
+    |grp_flattening_layer_fu_358    |flattening_layer    |        0|      0|    70|    409|
+    +-------------------------------+--------------------+---------+-------+------+-------+
+    |Total                          |                    |       37|      0|  5912|  45839|
+    +-------------------------------+--------------------+---------+-------+------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +----------------+-----------------------------+---------+----+----+------+-----+------+-------------+
+    |     Memory     |            Module           | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+-----------------------------+---------+----+----+------+-----+------+-------------+
+    |output1_V_U     |ActivateNetwork_output1_V    |        4|   0|   0|  2700|   16|     1|        43200|
+    |output2_0_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_1_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_2_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_3_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_4_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_5_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_6_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_7_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_8_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_9_V_U   |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_10_V_U  |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_11_V_U  |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_12_V_U  |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_13_V_U  |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output2_14_V_U  |ActivateNetwork_output2_0_V  |        0|  18|  13|    90|    9|     1|          810|
+    |output3_0_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_1_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_2_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_3_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_4_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_5_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_6_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_7_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_8_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_9_V_U   |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_10_V_U  |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_11_V_U  |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output3_12_V_U  |ActivateNetwork_output3_0_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output4_V_U     |ActivateNetwork_output4_V    |        1|   0|   0|   576|    8|     1|         4608|
+    |output5_V_U     |ActivateNetwork_output5_V    |        1|   0|   0|   576|    8|     1|         4608|
+    |output6_V_U     |ActivateNetwork_output6_V    |        0|  14|  14|   120|    7|     1|          840|
+    |output7_V_U     |ActivateNetwork_output7_V    |        0|  14|  10|    84|    7|     1|          588|
+    +----------------+-----------------------------+---------+----+----+------+-----+------+-------------+
+    |Total           |                             |       19| 298| 219|  8110|  285|    33|        87626|
+    +----------------+-----------------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  85|         17|    1|         17|
+    |output1_V_address0     |  15|          3|   12|         36|
+    |output1_V_address1     |  15|          3|   12|         36|
+    |output1_V_ce0          |  15|          3|    1|          3|
+    |output1_V_ce1          |  15|          3|    1|          3|
+    |output1_V_we0          |   9|          2|    2|          4|
+    |output1_V_we1          |   9|          2|    2|          4|
+    |output2_0_V_address0   |  15|          3|    7|         21|
+    |output2_0_V_ce0        |  15|          3|    1|          3|
+    |output2_0_V_ce1        |   9|          2|    1|          2|
+    |output2_0_V_we0        |   9|          2|    1|          2|
+    |output2_10_V_address0  |  15|          3|    7|         21|
+    |output2_10_V_ce0       |  15|          3|    1|          3|
+    |output2_10_V_ce1       |   9|          2|    1|          2|
+    |output2_10_V_we0       |   9|          2|    1|          2|
+    |output2_11_V_address0  |  15|          3|    7|         21|
+    |output2_11_V_ce0       |  15|          3|    1|          3|
+    |output2_11_V_ce1       |   9|          2|    1|          2|
+    |output2_11_V_we0       |   9|          2|    1|          2|
+    |output2_12_V_address0  |  15|          3|    7|         21|
+    |output2_12_V_ce0       |  15|          3|    1|          3|
+    |output2_12_V_ce1       |   9|          2|    1|          2|
+    |output2_12_V_we0       |   9|          2|    1|          2|
+    |output2_13_V_address0  |  15|          3|    7|         21|
+    |output2_13_V_ce0       |  15|          3|    1|          3|
+    |output2_13_V_ce1       |   9|          2|    1|          2|
+    |output2_13_V_we0       |   9|          2|    1|          2|
+    |output2_14_V_address0  |  15|          3|    7|         21|
+    |output2_14_V_ce0       |  15|          3|    1|          3|
+    |output2_14_V_ce1       |   9|          2|    1|          2|
+    |output2_14_V_we0       |   9|          2|    1|          2|
+    |output2_1_V_address0   |  15|          3|    7|         21|
+    |output2_1_V_ce0        |  15|          3|    1|          3|
+    |output2_1_V_ce1        |   9|          2|    1|          2|
+    |output2_1_V_we0        |   9|          2|    1|          2|
+    |output2_2_V_address0   |  15|          3|    7|         21|
+    |output2_2_V_ce0        |  15|          3|    1|          3|
+    |output2_2_V_ce1        |   9|          2|    1|          2|
+    |output2_2_V_we0        |   9|          2|    1|          2|
+    |output2_3_V_address0   |  15|          3|    7|         21|
+    |output2_3_V_ce0        |  15|          3|    1|          3|
+    |output2_3_V_ce1        |   9|          2|    1|          2|
+    |output2_3_V_we0        |   9|          2|    1|          2|
+    |output2_4_V_address0   |  15|          3|    7|         21|
+    |output2_4_V_ce0        |  15|          3|    1|          3|
+    |output2_4_V_ce1        |   9|          2|    1|          2|
+    |output2_4_V_we0        |   9|          2|    1|          2|
+    |output2_5_V_address0   |  15|          3|    7|         21|
+    |output2_5_V_ce0        |  15|          3|    1|          3|
+    |output2_5_V_ce1        |   9|          2|    1|          2|
+    |output2_5_V_we0        |   9|          2|    1|          2|
+    |output2_6_V_address0   |  15|          3|    7|         21|
+    |output2_6_V_ce0        |  15|          3|    1|          3|
+    |output2_6_V_ce1        |   9|          2|    1|          2|
+    |output2_6_V_we0        |   9|          2|    1|          2|
+    |output2_7_V_address0   |  15|          3|    7|         21|
+    |output2_7_V_ce0        |  15|          3|    1|          3|
+    |output2_7_V_ce1        |   9|          2|    1|          2|
+    |output2_7_V_we0        |   9|          2|    1|          2|
+    |output2_8_V_address0   |  15|          3|    7|         21|
+    |output2_8_V_ce0        |  15|          3|    1|          3|
+    |output2_8_V_ce1        |   9|          2|    1|          2|
+    |output2_8_V_we0        |   9|          2|    1|          2|
+    |output2_9_V_address0   |  15|          3|    7|         21|
+    |output2_9_V_ce0        |  15|          3|    1|          3|
+    |output2_9_V_ce1        |   9|          2|    1|          2|
+    |output2_9_V_we0        |   9|          2|    1|          2|
+    |output3_0_V_address0   |  15|          3|    8|         24|
+    |output3_0_V_address1   |  15|          3|    8|         24|
+    |output3_0_V_ce0        |  15|          3|    1|          3|
+    |output3_0_V_ce1        |  15|          3|    1|          3|
+    |output3_0_V_we0        |   9|          2|    1|          2|
+    |output3_0_V_we1        |   9|          2|    1|          2|
+    |output3_10_V_address0  |  15|          3|    8|         24|
+    |output3_10_V_address1  |  15|          3|    8|         24|
+    |output3_10_V_ce0       |  15|          3|    1|          3|
+    |output3_10_V_ce1       |  15|          3|    1|          3|
+    |output3_10_V_we0       |   9|          2|    1|          2|
+    |output3_10_V_we1       |   9|          2|    1|          2|
+    |output3_11_V_address0  |  15|          3|    8|         24|
+    |output3_11_V_address1  |  15|          3|    8|         24|
+    |output3_11_V_ce0       |  15|          3|    1|          3|
+    |output3_11_V_ce1       |  15|          3|    1|          3|
+    |output3_11_V_we0       |   9|          2|    1|          2|
+    |output3_11_V_we1       |   9|          2|    1|          2|
+    |output3_1_V_address0   |  15|          3|    8|         24|
+    |output3_1_V_address1   |  15|          3|    8|         24|
+    |output3_1_V_ce0        |  15|          3|    1|          3|
+    |output3_1_V_ce1        |  15|          3|    1|          3|
+    |output3_1_V_we0        |   9|          2|    1|          2|
+    |output3_1_V_we1        |   9|          2|    1|          2|
+    |output3_2_V_address0   |  15|          3|    8|         24|
+    |output3_2_V_address1   |  15|          3|    8|         24|
+    |output3_2_V_ce0        |  15|          3|    1|          3|
+    |output3_2_V_ce1        |  15|          3|    1|          3|
+    |output3_2_V_we0        |   9|          2|    1|          2|
+    |output3_2_V_we1        |   9|          2|    1|          2|
+    |output3_3_V_address0   |  15|          3|    8|         24|
+    |output3_3_V_address1   |  15|          3|    8|         24|
+    |output3_3_V_ce0        |  15|          3|    1|          3|
+    |output3_3_V_ce1        |  15|          3|    1|          3|
+    |output3_3_V_we0        |   9|          2|    1|          2|
+    |output3_3_V_we1        |   9|          2|    1|          2|
+    |output3_4_V_address0   |  15|          3|    8|         24|
+    |output3_4_V_address1   |  15|          3|    8|         24|
+    |output3_4_V_ce0        |  15|          3|    1|          3|
+    |output3_4_V_ce1        |  15|          3|    1|          3|
+    |output3_4_V_we0        |   9|          2|    1|          2|
+    |output3_4_V_we1        |   9|          2|    1|          2|
+    |output3_5_V_address0   |  15|          3|    8|         24|
+    |output3_5_V_address1   |  15|          3|    8|         24|
+    |output3_5_V_ce0        |  15|          3|    1|          3|
+    |output3_5_V_ce1        |  15|          3|    1|          3|
+    |output3_5_V_we0        |   9|          2|    1|          2|
+    |output3_5_V_we1        |   9|          2|    1|          2|
+    |output3_6_V_address0   |  15|          3|    8|         24|
+    |output3_6_V_address1   |  15|          3|    8|         24|
+    |output3_6_V_ce0        |  15|          3|    1|          3|
+    |output3_6_V_ce1        |  15|          3|    1|          3|
+    |output3_6_V_we0        |   9|          2|    1|          2|
+    |output3_6_V_we1        |   9|          2|    1|          2|
+    |output3_7_V_address0   |  15|          3|    8|         24|
+    |output3_7_V_address1   |  15|          3|    8|         24|
+    |output3_7_V_ce0        |  15|          3|    1|          3|
+    |output3_7_V_ce1        |  15|          3|    1|          3|
+    |output3_7_V_we0        |   9|          2|    1|          2|
+    |output3_7_V_we1        |   9|          2|    1|          2|
+    |output3_8_V_address0   |  15|          3|    8|         24|
+    |output3_8_V_address1   |  15|          3|    8|         24|
+    |output3_8_V_ce0        |  15|          3|    1|          3|
+    |output3_8_V_ce1        |  15|          3|    1|          3|
+    |output3_8_V_we0        |   9|          2|    1|          2|
+    |output3_8_V_we1        |   9|          2|    1|          2|
+    |output3_9_V_address0   |  15|          3|    8|         24|
+    |output3_9_V_address1   |  15|          3|    8|         24|
+    |output3_9_V_ce0        |  15|          3|    1|          3|
+    |output3_9_V_ce1        |  15|          3|    1|          3|
+    |output3_9_V_we0        |   9|          2|    1|          2|
+    |output3_9_V_we1        |   9|          2|    1|          2|
+    |output4_V_address0     |  15|          3|   10|         30|
+    |output4_V_ce0          |  15|          3|    1|          3|
+    |output4_V_we0          |   9|          2|    1|          2|
+    |output5_V_address0     |  15|          3|   10|         30|
+    |output5_V_ce0          |  15|          3|    1|          3|
+    |output5_V_ce1          |   9|          2|    1|          2|
+    |output5_V_we0          |   9|          2|    1|          2|
+    |output6_V_address0     |  15|          3|    7|         21|
+    |output6_V_ce0          |  15|          3|    1|          3|
+    |output6_V_we0          |   9|          2|    1|          2|
+    |output7_V_address0     |  15|          3|    7|         21|
+    |output7_V_ce0          |  15|          3|    1|          3|
+    |output7_V_we0          |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |1984|        409|  464|       1343|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |  16|   0|   16|          0|
+    |grp_avg_pooling_layer1_fu_328_ap_start_reg  |   1|   0|    1|          0|
+    |grp_avg_pooling_layer2_fu_311_ap_start_reg  |   1|   0|    1|          0|
+    |grp_conv_layer1_fu_274_ap_start_reg         |   1|   0|    1|          0|
+    |grp_conv_layer2_fu_212_ap_start_reg         |   1|   0|    1|          0|
+    |grp_dense_layer1_fu_264_ap_start_reg        |   1|   0|    1|          0|
+    |grp_dense_layer2_fu_348_ap_start_reg        |   1|   0|    1|          0|
+    |grp_dense_layer3_fu_302_ap_start_reg        |   1|   0|    1|          0|
+    |grp_flattening_layer_fu_358_ap_start_reg    |   1|   0|    1|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       |  24|   0|   24|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|input_image_V_address0  | out |   10|  ap_memory |  input_image_V  |     array    |
+|input_image_V_ce0       | out |    1|  ap_memory |  input_image_V  |     array    |
+|input_image_V_q0        |  in |    8|  ap_memory |  input_image_V  |     array    |
+|input_image_V_address1  | out |   10|  ap_memory |  input_image_V  |     array    |
+|input_image_V_ce1       | out |    1|  ap_memory |  input_image_V  |     array    |
+|input_image_V_q1        |  in |    8|  ap_memory |  input_image_V  |     array    |
+|output8_V_address0      | out |    4|  ap_memory |    output8_V    |     array    |
+|output8_V_ce0           | out |    1|  ap_memory |    output8_V    |     array    |
+|output8_V_we0           | out |    1|  ap_memory |    output8_V    |     array    |
+|output8_V_d0            | out |   10|  ap_memory |    output8_V    |     array    |
++------------------------+-----+-----+------------+-----------------+--------------+
+
