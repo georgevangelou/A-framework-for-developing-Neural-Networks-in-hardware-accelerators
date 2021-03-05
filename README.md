@@ -1,15 +1,15 @@
 # A framework for developing Neural Networks in hardware accelerators
 ## Description
-This framework was part of the **Diploma thesis** titled "Architectures and Implementation of the Neural Network LeNet-5 in FPGAs".
+This framework was part of the **Diploma thesis** titled "Architectures and Implementations of the Neural Network LeNet-5 in FPGAs".
 
 The **main goal** of this thesis was to create a LeNet-5 implementation in an FPGA development board, but also form a reusable framework/workflow which can be modified to model and develop other Neural Networks too.
 
 The **authors** of this thesis were (in alphabetical order):
 - George Evangelou (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: george_evangelou@windowslive.com
+  - Email: george_evangelou [at] windowslive.com
   - [LinkedIn profile](https://www.linkedin.com/in/georgios-evangelou-2a389b167/)
 - Nick Roussos (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: up1046939@upnet.gr
+  - Email: nroussos97 [at] gmail.com
 
 **Duration** of the thesis: May 2019 - July 2020
 ## Instructions
@@ -18,7 +18,7 @@ Most code is commented or self-descriptive.
 In order to replicate our workflow, start developing in the order of the folders' indices.
 
 Frameworks used:
-- Caffe
+- Caffe/Ristretto
 - Python 3.8
 - Keras
 - C/C++
@@ -34,7 +34,9 @@ The folders contained within this repository are the following:
   - An excel document that assisted in developments and debugging.
   - Two excel documents containing the accumulative evaluation results of our C/C++ implementation.
 - **6.Testbench**: A script that generates files to be utilized by the Vivado HLS testbench we have created (_see 3.LeNet_in_C_).
-- **8.Zynq**: 
+- **7.LeNet_in_Ristretto**: The LeNet-5 model in Ristretto with the corresponding quantization.
+- **8.Optimizations**: Definitions and reports of the different architectures created utilizing a variety of optimizations.
+- **9.Zynq**: 
   - The IP produced using Vivado and Vivado HLS.
   - The SDK project produced.
   - The PC<->Board testbench script.

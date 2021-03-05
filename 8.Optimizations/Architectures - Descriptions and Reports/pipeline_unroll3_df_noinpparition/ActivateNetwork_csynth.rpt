@@ -1,0 +1,315 @@
+
+
+================================================================
+== Vivado HLS Report for 'ActivateNetwork'
+================================================================
+* Date:           Sun Apr  5 22:20:28 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ER_lenet
+* Solution:       Pipeline_Unroll3_DF_NoInpPartition
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.720|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+----------+
+    |    Latency    |    Interval   | Pipeline |
+    |  min  |  max  |  min  |  max  |   Type   |
+    +-------+-------+-------+-------+----------+
+    |  90677|  90677|  38762|  38762| dataflow |
+    +-------+-------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+--------------------+-------+-------+-------+-------+---------+
+        |                       |                    |    Latency    |    Interval   | Pipeline|
+        |        Instance       |       Module       |  min  |  max  |  min  |  max  |   Type  |
+        +-----------------------+--------------------+-------+-------+-------+-------+---------+
+        |conv_layer2_U0         |conv_layer2         |   8065|   8065|   8065|   8065|   none  |
+        |dense_layer1_U0        |dense_layer1        |  38761|  38761|  38761|  38761|   none  |
+        |conv_layer1_U0         |conv_layer1         |  29749|  29749|  29749|  29749|   none  |
+        |dense_layer3_U0        |dense_layer3        |   1082|   1082|   1082|   1082|   none  |
+        |avg_pooling_layer2_U0  |avg_pooling_layer2  |    579|    579|    579|    579|   none  |
+        |avg_pooling_layer1_U0  |avg_pooling_layer1  |   1354|   1354|   1354|   1354|   none  |
+        |dense_layer2_U0        |dense_layer2        |  10501|  10501|  10501|  10501|   none  |
+        |flattening_layer_U0    |flattening_layer    |    579|    579|    579|    579|   none  |
+        +-----------------------+--------------------+-------+-------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     354|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |       37|      0|    5638|   45816|
+|Memory           |       19|      -|     298|     219|
+|Multiplexer      |        -|      -|       -|     243|
+|Register         |        -|      -|      27|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       56|      0|    5963|   46632|
++-----------------+---------+-------+--------+--------+
+|Available        |      650|    600|  202800|  101400|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        8|      0|       2|      45|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+--------------------+---------+-------+------+-------+
+    |        Instance       |       Module       | BRAM_18K| DSP48E|  FF  |  LUT  |
+    +-----------------------+--------------------+---------+-------+------+-------+
+    |avg_pooling_layer1_U0  |avg_pooling_layer1  |        0|      0|   336|    733|
+    |avg_pooling_layer2_U0  |avg_pooling_layer2  |        0|      0|    83|    796|
+    |conv_layer1_U0         |conv_layer1         |        0|      0|   455|   2304|
+    |conv_layer2_U0         |conv_layer2         |        0|      0|  3872|  32993|
+    |dense_layer1_U0        |dense_layer1        |       32|      0|   410|   7191|
+    |dense_layer2_U0        |dense_layer2        |        4|      0|    77|    403|
+    |dense_layer3_U0        |dense_layer3        |        1|      0|   334|    972|
+    |flattening_layer_U0    |flattening_layer    |        0|      0|    71|    424|
+    +-----------------------+--------------------+---------+-------+------+-------+
+    |Total                  |                    |       37|      0|  5638|  45816|
+    +-----------------------+--------------------+---------+-------+------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +----------------+------------------------------+---------+----+----+------+-----+------+-------------+
+    |     Memory     |            Module            | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+------------------------------+---------+----+----+------+-----+------+-------------+
+    |output1_V_U     |ActivateNetwork_output1_V     |        4|   0|   0|  2700|   16|     2|        86400|
+    |output2_0_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_1_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_2_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_3_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_4_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_5_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_6_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_7_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_8_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_9_V_U   |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_10_V_U  |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_11_V_U  |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_12_V_U  |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_13_V_U  |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output2_14_V_U  |ActivateNetwork_output2_0_V   |        0|  18|  13|    90|    9|     2|         1620|
+    |output3_0_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_1_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_2_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_3_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_4_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_5_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_6_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_7_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_8_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_9_V_U   |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_10_V_U  |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_11_V_U  |ActivateNetwork_output3_0_V   |        1|   0|   0|   208|    8|     2|         3328|
+    |output3_12_V_U  |ActivateNetwork_output3_12_V  |        1|   0|   0|   208|    8|     1|         1664|
+    |output4_V_U     |ActivateNetwork_output4_V     |        1|   0|   0|   576|    8|     2|         9216|
+    |output5_V_U     |ActivateNetwork_output5_V     |        1|   0|   0|   576|    8|     2|         9216|
+    |output6_V_U     |ActivateNetwork_output6_V     |        0|  14|  14|   120|    7|     2|         1680|
+    |output7_V_U     |ActivateNetwork_output7_V     |        0|  14|  10|    84|    7|     2|         1176|
+    +----------------+------------------------------+---------+----+----+------+-----+------+-------------+
+    |Total           |                              |       19| 298| 219|  8110|  285|    65|       173588|
+    +----------------+------------------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |ap_channel_done_output2_0_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_10_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_11_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_12_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_13_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_14_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_1_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_2_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_3_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_4_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_5_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_6_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_7_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_8_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output2_9_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_0_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_10_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_11_V        |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_1_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_2_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_3_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_4_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_5_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_6_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_7_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_8_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_channel_done_output3_9_V         |    and   |      0|  0|   6|           1|           1|
+    |ap_idle                             |    and   |      0|  0|   6|           1|           1|
+    |avg_pooling_layer1_U0_ap_continue   |    and   |      0|  0|   6|           1|           1|
+    |avg_pooling_layer2_U0_ap_start      |    and   |      0|  0|   6|           1|           1|
+    |conv_layer2_U0_ap_continue          |    and   |      0|  0|   6|           1|           1|
+    |conv_layer2_U0_ap_start             |    and   |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_0_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_10_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_11_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_12_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_13_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_14_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_1_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_2_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_3_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_4_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_5_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_6_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_7_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_8_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output2_9_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_0_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_10_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_11_V  |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_1_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_2_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_3_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_4_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_5_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_6_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_7_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_8_V   |    or    |      0|  0|   6|           1|           1|
+    |ap_sync_channel_write_output3_9_V   |    or    |      0|  0|   6|           1|           1|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                               |          |      0|  0| 354|          59|          59|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_output2_0_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_10_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_11_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_12_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_13_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_14_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_1_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_2_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_3_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_4_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_5_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_6_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_7_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_8_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output2_9_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_0_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_10_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_11_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_1_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_2_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_3_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_4_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_5_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_6_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_7_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_8_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_output3_9_V   |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 243|         54|   27|         54|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+---+----+-----+-----------+
+    |                  Name                  | FF| LUT| Bits| Const Bits|
+    +----------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_output2_0_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_10_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_11_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_12_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_13_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_14_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_1_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_2_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_3_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_4_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_5_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_6_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_7_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_8_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output2_9_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_0_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_10_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_11_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_1_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_2_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_3_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_4_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_5_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_6_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_7_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_8_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_output3_9_V   |  1|   0|    1|          0|
+    +----------------------------------------+---+----+-----+-----------+
+    |Total                                   | 27|   0|   27|          0|
+    +----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | ActivateNetwork | return value |
+|input_image_V_address0  | out |   10|  ap_memory |  input_image_V  |     array    |
+|input_image_V_ce0       | out |    1|  ap_memory |  input_image_V  |     array    |
+|input_image_V_d0        | out |    8|  ap_memory |  input_image_V  |     array    |
+|input_image_V_q0        |  in |    8|  ap_memory |  input_image_V  |     array    |
+|input_image_V_we0       | out |    1|  ap_memory |  input_image_V  |     array    |
+|input_image_V_address1  | out |   10|  ap_memory |  input_image_V  |     array    |
+|input_image_V_ce1       | out |    1|  ap_memory |  input_image_V  |     array    |
+|input_image_V_d1        | out |    8|  ap_memory |  input_image_V  |     array    |
+|input_image_V_q1        |  in |    8|  ap_memory |  input_image_V  |     array    |
+|input_image_V_we1       | out |    1|  ap_memory |  input_image_V  |     array    |
+|output8_V_address0      | out |    4|  ap_memory |    output8_V    |     array    |
+|output8_V_ce0           | out |    1|  ap_memory |    output8_V    |     array    |
+|output8_V_d0            | out |   10|  ap_memory |    output8_V    |     array    |
+|output8_V_q0            |  in |   10|  ap_memory |    output8_V    |     array    |
+|output8_V_we0           | out |    1|  ap_memory |    output8_V    |     array    |
+|output8_V_address1      | out |    4|  ap_memory |    output8_V    |     array    |
+|output8_V_ce1           | out |    1|  ap_memory |    output8_V    |     array    |
+|output8_V_d1            | out |   10|  ap_memory |    output8_V    |     array    |
+|output8_V_q1            |  in |   10|  ap_memory |    output8_V    |     array    |
+|output8_V_we1           | out |    1|  ap_memory |    output8_V    |     array    |
++------------------------+-----+-----+------------+-----------------+--------------+
+
