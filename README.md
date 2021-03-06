@@ -40,6 +40,6 @@ The folders contained within this repository are the following:
   - The IP produced using Vivado and Vivado HLS.
   - The SDK project produced.
   - The PC<->Board testbench script.
-- **10.Diploma Thesis**: The diploma thesis PDFs in both English and Greek.
+- **A1.Diploma Thesis**: The diploma thesis PDFs in both English and Greek.
 # 
 This repository is _work in progress_. Please contact the authors for any issue.
