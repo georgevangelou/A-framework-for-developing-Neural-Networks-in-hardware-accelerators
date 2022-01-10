@@ -5,8 +5,8 @@ This framework was part of the **Diploma thesis** titled "Architectures and Impl
 The **main goal** of this thesis was to create a LeNet-5 implementation in an FPGA development board, but also form a reusable framework/workflow which can be modified to model and develop other Neural Networks as well.
 
 The **authors** of this thesis were (in alphabetical order):
-- George Evangelou (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: george_evangelou [at] windowslive.com
+- Georgios Evangelou (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
+  - Email: gevangelou [at] hotmail.com
   - [LinkedIn profile](https://www.linkedin.com/in/georgios-evangelou-2a389b167/)
 - Nick Roussos (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
   - Email: nroussos97 [at] gmail.com
