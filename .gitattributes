@@ -1,5 +1,5 @@
 9.Zynq/Zynq_lenet/AXI_lenet_ip/hdl/** linguist-vendored
 9.Zynq/Zynq_lenet/AXI_lenet_ip/hdl/* linguist-vendored
 
-9.Zynq/Zynq_lenet/ER_lenet.sdk/webtalk/* linguist-vendored
-9.Zynq/Zynq_lenet/ER_lenet.sdk/design_1_wrapper_hw_platform_0/* linguist-vendored
+9.Zynq/Zynq_lenet/ER_lenet.sdk/webtalk/usage_statistics_ext_sdk.html -linguist-vendored
+9.Zynq/Zynq_lenet/ER_lenet.sdk/design_1_wrapper_hw_platform_0/ps7_init.html -linguist-vendored
